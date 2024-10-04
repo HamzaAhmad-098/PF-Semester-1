@@ -25,4 +25,4 @@ void flowerShop(int redRoses , int whiteRoses , int tulips)
              discountedPrice = totalPrice-((20*totalPrice)/100);
              cout<<"discounted price is  " <<discountedPrice <<"$";
              }
-     }
+c     }

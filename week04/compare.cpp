@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+main()
+  {
+   float num1 , num2;
+   cout<<"enter first number";
+   cin>>num1;
+   cout<<"enter second number";
+   cin>>num2;
+   if(num1<num2)
+      { 
+        cout<<"minimum number is  "<<num1;
+      }
+   if(num1>num2)
+      {
+        cout<<"minimum number is    "<<num2; 
+      }
+  }

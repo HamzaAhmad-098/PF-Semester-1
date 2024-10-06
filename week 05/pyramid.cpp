@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 int pyramid();
 string unit;
@@ -20,20 +21,20 @@ main()
  int pyramid()
   {
     double volumne ;
-    volumne = (1/3)*length*height*width;
+    volumne = 0.3333*length*height*width;
     if(unit=="centimeter")
         {
-           volumne = volumne/(10*10);
+           volumne = volumne*(pow(10,6));
            cout<<"volume is  "<<volumne<<" cubic "<<unit;
         } 
     if(unit=="millimeter")
         {
-          volumne = volumne/(10*10*10);
-          cout<<"volumne is   "<<volumne<<" cubic"<<unit;
+          volumne = volumne*(pow(10 , 9));
+          cout<<"volumne is   "<<volumne<<" cubic  "<<unit;
         }
     if(unit=="kilometers")
         {
-          volumne = volumne*10*10*10;
+          volumne = volumne/(pow(10 , 9));
           cout<<"volumne is  "<<volumne<<" cubic "<<unit;
         }
     return volumne;

@@ -8,16 +8,16 @@ int cost;
 string startingStation ;
 string endingStation;
 int payAmount;
-string mode;	
-main()
+string mode;
+ main()
 {
 	header();
 	cout<<"enter starting station :";
 	cin>> startingStation;
 	cout<<"enter ending station :";
 	cin>> endingStation;
-        cout<<"enter the amount you pay";
-        cin>>payAmount;
+    cout<<"enter the amount you pay : ";
+    cin>>payAmount;
 	cout<<"enter your mode of payment";
 	cin>>mode;
 	interface();
@@ -2687,7 +2687,7 @@ int payment(string startingStation , string endingStation)
 void interface()
 {  
     
-    int remaining = payAmount - payment( startingStation ,  endingStation);
+        int remaining = payAmount - payment( startingStation ,  endingStation);
 	cout<<" SVC receipt"<<endl;
 	cout<<" -------------"<<endl;
 	cout<<"Ticket type : normal stored value tocken"<<endl;

@@ -16,65 +16,65 @@ main()
 float calculateFruitPrice(string fruit, string dayOfWeek, double quantity)
 {
 	float price;
-	if(dayOfWeek =="monday" || dayOfWeek =="tuesday" || dayOfWeek =="wednesday" || dayOfWeek =="thursday" || dayOfWeek =="friday")
+	if(dayOfWeek =="Monday" || dayOfWeek =="Tuesday" || dayOfWeek =="Wednesday" || dayOfWeek =="Thursday" || dayOfWeek =="Friday")
 	{
-		if(fruit=="banana")
+		if(fruit=="Banana")
 		{
 			price = 2.5*quantity;
 		   	
 		}
-		if(fruit=="orange")
+		if(fruit=="Orange")
 		{
 			price = 0.85*quantity;
 		}
-		if(fruit=="apple")
+		if(fruit=="Apple")
 		{
 			price = 1.20*quantity;
 		}
-		if(fruit=="grapefruit")
+		if(fruit=="Grapefruit")
 		{
 			price = 1.45*quantity;
 		}
-		if(fruit=="kiwi")
+		if(fruit=="Kiwi")
 		{
 			price = 2.70*quantity;
 		}
-		if(fruit=="grapes")
+		if(fruit=="Grapes")
 		{
 			price = 3.85*quantity;
 		}
-		if(fruit=="pineapple")
+		if(fruit=="Pineapple")
 		{
 			price = 5.50*quantity;
 		}
 	}
-	if(dayOfWeek =="saturday" || dayOfWeek =="sunday")
+	if(dayOfWeek =="Saturday" || dayOfWeek =="Sunday")
 	{
-		if(fruit=="banana")
+		if(fruit=="Banana")
 		{
 			price = 2.70*quantity;
 		}
-		if(fruit=="orange")
+		if(fruit=="Orange")
 		{
 			price = 0.90*quantity;
 		}
-		if(fruit=="apple")
+		if(fruit=="Apple")
 		{
 			price = 1.25*quantity;
 		}
-		if(fruit=="grapefruit")
+		if(fruit=="Grapefruit")
 		{
 			price = 1.60*quantity;
 		}
-		if(fruit=="kiwi")
+		if(fruit=="Kiwi")
 		{
 			price = 3.00*quantity;
 		}
-		if(fruit=="grapes")
+		if(fruit=="Grapes")
 		{
 			price = 4.20*quantity;
 		}
-		if(fruit=="pineapple")
+		if(fruit=="Pineapple")
 		{
 			price = 5.60*quantity;
 		}

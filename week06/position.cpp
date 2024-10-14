@@ -13,23 +13,31 @@ main()
 	cout<<checkPointPosition(h , x , y);
 	
 }
-string checkPointPosition(int h, int x, int y)
-{
-	int rangeOfx , rangeOfY ;
-	string result;
-	rangeOfx = 3*h;
-	rangeOfY = 4*h;
-	if(x>rangeOfx || y>rangeOfY)
-	{
-		result = "outside";
-	}
-	if(x<rangeOfx)
-	{
-		result = "inside";
-	}
-	if(x==rangeOfx ||  y == rangeOfY)
-	{
-		result ="Equal";
-	}
-	return result;
+string checkPointPosition(int h, int x, int y) {
+    
+    if (x >= 0 && x <= 2 * h && y >= 0 && y <= 2 * h) {
+        if (x == 0 || x == 2 * h || y == 0 || y == 2 * h) {
+            return "border";
+        } else {
+            return "inside";
+        }
+    }
+    // Left top block check
+    else if (x >= 0 && x <= h && y > 2 * h && y <= 4 * h) {
+        if (x == 0 || x == h || y == 2 * h || y == 4 * h) {
+            return "border";
+        } else {
+            return "inside";
+        }
+    }
+    // Right top block check
+    else if (x > h && x <= 2 * h && y > 2 * h && y <= 4 * h) {
+        if (x == h || x == 2 * h || y == 2 * h || y == 4 * h) {
+            return "border";
+        } else {
+            return "inside";
+        }
+    }
+    // Outside all regions
+    return "outside";
 }

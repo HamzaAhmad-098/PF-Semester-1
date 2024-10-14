@@ -48,7 +48,7 @@ float bill(char serviceCode , int minutes )
 		cost = 25;
 		char time;
 		cout<<"enter your time (d/D for day , n/N for night)";
-	    cin>>time;
+	        cin>>time;
 		if(time == 'd' || time == 'D')
 		{ 
 		    minuteUsed = minutes-75;

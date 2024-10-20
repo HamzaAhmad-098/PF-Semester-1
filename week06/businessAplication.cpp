@@ -1,29 +1,24 @@
 #include<iostream>
 #include<string>
+
 using namespace std;
 int payment( string , string );
 void interface();
 void header ();
-int cost;
+void login();
+void signIn();
+void signUp();
+void validation();
 string startingStation ;
 string endingStation;
 int payAmount;
 string mode;
+
+string email , password ,checkEmail , checkpassword;
  main()
 {
-	header();
-	cout<<"enter starting station :";
-	cin>> startingStation;
-	cout<<"enter ending station :";
-	cin>> endingStation;
-    cout<<"enter the amount you pay : ";
-    cin>>payAmount;
-	cout<<"enter your mode of payment";
-	cin>>mode;
-	interface();
-    
-	
-	
+	header ();
+    login();
 }
 void header ()
 {
@@ -41,7 +36,7 @@ void header ()
 }
 int payment(string startingStation , string endingStation)
 { 
-   
+   int cost ;
 	if(startingStation =="DERAGUJRAN")
 	{
 		if(endingStation=="ISLAMPARK")
@@ -146,7 +141,7 @@ int payment(string startingStation , string endingStation)
 			cost = 45;
 		}
 	}
-    if(startingStation =="ISLAMPARK")
+    else if(startingStation =="ISLAMPARK")
 	{
 		
 		if(endingStation=="SALAMATPURA")
@@ -247,7 +242,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="SALAMATPURA")
+	else if(startingStation =="SALAMATPURA")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -348,7 +343,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="MAHMOODBOOTI")
+	else if(startingStation =="MAHMOODBOOTI")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -449,7 +444,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="PAKISTANMINT")
+	else if(startingStation =="PAKISTANMINT")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -550,7 +545,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="SHALAMARGARDEN")
+	else if(startingStation =="SHALAMARGARDEN")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -651,7 +646,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="BAGHBANPURA")
+	else if(startingStation =="BAGHBANPURA")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -751,7 +746,7 @@ int payment(string startingStation , string endingStation)
 			cost = 40;
 		}
 	}
-	if(startingStation =="UET")
+	else if(startingStation =="UET")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -852,7 +847,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}	
-	if(startingStation =="SULTANPURA")
+	else if(startingStation =="SULTANPURA")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -953,7 +948,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="RAILWAYSTATION")
+	else if(startingStation =="RAILWAYSTATION")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -1054,7 +1049,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="LAKSHMI")
+	else if(startingStation =="LAKSHMI")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -1155,7 +1150,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="GPO")
+	else if(startingStation =="GPO")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -1256,7 +1251,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="ANARKALI")
+	else if(startingStation =="ANARKALI")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -1357,7 +1352,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="CHAUBURJI")
+	else if(startingStation =="CHAUBURJI")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -1458,7 +1453,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="GULSHANERAVI")
+	else if(startingStation =="GULSHANERAVI")
 	{
 	
 		if(endingStation=="ISLAMPARK")
@@ -1560,7 +1555,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="SAMANABAD")
+	else if(startingStation =="SAMANABAD")
 	{
 		
 		if(endingStation=="ISLAMPARK")
@@ -1662,7 +1657,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="BUNDROAD")
+	else if(startingStation =="BUNDROAD")
 	{
 		
 		if(endingStation=="ISLAMPARK")
@@ -1764,7 +1759,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="SALAHUDINROAD")
+	else if(startingStation =="SALAHUDINROAD")
 	{
 		
 		if(endingStation=="ISLAMPARK")
@@ -1866,7 +1861,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="SHAHNOOR" || startingStation =="KHATAMENABUWAT")
+	else  if(startingStation =="SHAHNOOR" || startingStation =="KHATAMENABUWAT")
 	{
 
 		if(endingStation=="ISLAMPARK")
@@ -1968,7 +1963,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="SABZAZAR")
+	else if(startingStation =="SABZAZAR")
 	{
 		
 		if(endingStation=="ISLAMPARK")
@@ -2070,7 +2065,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="AWANTOWN")
+	else if(startingStation =="AWANTOWN")
 	{
 		if(endingStation=="ISLAMPARK")
 		{
@@ -2171,7 +2166,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="WAHDATROAD")
+	else if(startingStation =="WAHDATROAD")
 	{
 	
 		if(endingStation=="ISLAMPARK")
@@ -2273,7 +2268,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="HANJARWAL")
+	else if(startingStation =="HANJARWAL")
 	{
 	
 		if(endingStation=="ISLAMPARK")
@@ -2375,7 +2370,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="CANALVIEW")
+	else if(startingStation =="CANALVIEW")
 	{
 		
 		if(endingStation=="ISLAMPARK")
@@ -2477,7 +2472,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="THOKARNIAZBAIG")
+	else  if(startingStation =="THOKARNIAZBAIG")
 	{
 	
 		if(endingStation=="ISLAMPARK")
@@ -2579,7 +2574,7 @@ int payment(string startingStation , string endingStation)
 		}
 		
 	}
-	if(startingStation =="ALITOWN")
+	else if(startingStation =="ALITOWN")
 	{
 	
 		if(endingStation=="ISLAMPARK")
@@ -2680,6 +2675,12 @@ int payment(string startingStation , string endingStation)
 		}
        
 	}
+	else {
+		system("cls");
+		header();
+		cout<<"Incorect format \n Make sure you write station name in capital letters and without spaces"<<endl;
+		validation();
+	}
   
 	
 	return cost;
@@ -2687,15 +2688,88 @@ int payment(string startingStation , string endingStation)
 void interface()
 {  
     
-        int remaining = payAmount - payment( startingStation ,  endingStation);
-	cout<<" SVC receipt"<<endl;
-	cout<<" -------------"<<endl;
-	cout<<"Ticket type : normal stored value tocken"<<endl;
-	cout<<"Mode of payment  : "<<mode<<endl;
-	cout<<"Pay amount is : " << payAmount<<endl;
-	cout<<"Price is :  "<< payment( startingStation ,  endingStation)<<endl; 
-	cout<<"Remaining Fare Value : "<<remaining<<endl;
-	cout<<"Station name :  "<<startingStation<<endl;
-	cout<<"Token is from  "<<startingStation <<" to "<<endingStation<<endl;
-	cout<<"please check the receipt ";
+    int remaining = payAmount - payment( startingStation ,  endingStation);
+	cout<<"###################################################"<<endl;
+	cout<<"#           SVC receipt                 			       #"<<endl;
+	cout<<"#          -------------                   		       #"<<endl;
+	cout<<"# 	 Ticket type : Normal stored value tocken  	       #"<<endl;
+	cout<<"#	Mode of payment  : "<<mode        	               	 #<<endl;
+	cout<<"#	Pay amount is :   "<< payAmount         	              	 #<<endl;
+	cout<<"#	Price is :       "<< payment( startingStation ,  endingStation)           	             #<<endl; 
+	cout<<"#	Remaining Fare Value : "<<remaining         	         #<<endl;
+	cout<<"#	Station name :       "<<startingStation               	     #<<endl;
+	cout<<"#	Token is from "<<startingStation <<" to "<<endingStation                          	 #<<endl;
+	cout<<"#	   please check the receipt                                     #"<<endl;
+	cout<<"###################################################
+}
+void login()
+{
+	string sign ;
+	cout<<" Enter sign in if you have account  "<<endl;
+	cout<<"   Enter sign up if you are new     "<<endl;
+	cin>>sign;
+	if(sign =="signin")
+	{
+        signIn();
+		
+	}
+	if(sign=="signup")
+	{		
+       signUp();
+	   
+	   system("cls");
+	   header();
+	   cout<<"welcome"<<endl;
+	   cout<<"Now sign in our platform "<<endl;
+	   
+	   signIn();
+	}
+}
+void signIn()
+{
+	    cout<<"Enter your Email :";
+		cin>>checkEmail;
+		cout<<"Enter your password : ";
+		cin>>checkpassword;
+		if(checkEmail ==  email && checkpassword ==  password )
+		{
+		     validation();
+			
+		}
+		else
+		{
+			system("cls");
+			header();
+			cout<<"user not found "<<endl;
+            cout<<"Incorrect email or password "<<endl;
+			
+			cout<<"TRY AGAIN"<<endl;
+			signIn();
+			
+		}
+}
+void signUp()
+{
+	
+		cout<<"Enter your email";
+        cin>>email;
+        cout<<"Create strong password";
+        cin>>password;
+		
+}
+void validation()
+{
+	
+	cout<<"enter starting station :";
+	cin>> startingStation;
+	cout<<"enter ending station :";
+	cin>> endingStation;
+	int cost = payment(startingStation , endingStation);
+    cout<<"enter the amount you pay : ";
+    cin>>payAmount;
+	cout<<"enter your mode of payment";
+	cin>>mode;
+	system("cls");
+	header();
+	interface();
 }

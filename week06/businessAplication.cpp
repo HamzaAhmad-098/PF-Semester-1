@@ -1,6 +1,5 @@
 #include<iostream>
 #include<string>
-
 using namespace std;
 int payment( string , string );
 void interface();
@@ -8,9 +7,11 @@ void header ();
 void login();
 void signIn();
 void signUp();
+void adminLogin();
 void validation();
 string startingStation ;
 string endingStation;
+void adminInterface();
 int payAmount;
 string mode;
 
@@ -18,7 +19,23 @@ string email , password ,checkEmail , checkpassword;
  main()
 {
 	header ();
-    login();
+	int choice;
+	while (true) {
+		cout << "Welcome to Orange Line Metro System\n";
+		cout << "1. Admin Login\n";
+		cout << "2. User Login\n"; 
+		cout << "3. Exit\n";
+		cout << "Enter your choice: ";
+		cin >> choice;
+	switch (choice) {
+		case 1: adminLogin(); 
+		break; 
+		case 2: login(); 
+		break; 
+		case 3: cout << "Exiting the system..." << endl; 
+		return 0;
+		default: cout << "Invalid choice. Please try again." << endl;
+	}}
 }
 void header ()
 {
@@ -2693,14 +2710,14 @@ void interface()
 	cout<<"#           SVC receipt                 			       #"<<endl;
 	cout<<"#          -------------                   		       #"<<endl;
 	cout<<"# 	 Ticket type : Normal stored value tocken  	       #"<<endl;
-	cout<<"#	Mode of payment  : "<<mode        	               	 #<<endl;
-	cout<<"#	Pay amount is :   "<< payAmount         	              	 #<<endl;
-	cout<<"#	Price is :       "<< payment( startingStation ,  endingStation)           	             #<<endl; 
-	cout<<"#	Remaining Fare Value : "<<remaining         	         #<<endl;
-	cout<<"#	Station name :       "<<startingStation               	     #<<endl;
-	cout<<"#	Token is from "<<startingStation <<" to "<<endingStation                          	 #<<endl;
-	cout<<"#	   please check the receipt                                     #"<<endl;
-	cout<<"###################################################
+	cout<<"#	Mode of payment  : "<<mode<<endl;
+	cout<<"#	Pay amount is :   "<< payAmount         	              	 <<endl;
+	cout<<"#	Price is :       "<< payment( startingStation ,  endingStation)           	             <<endl; 
+	cout<<"#	Remaining Fare Value : "<<remaining         	         <<endl;
+	cout<<"#	Station name :       "<<startingStation               	     <<endl;
+	cout<<"#	Token is from "<<startingStation <<" to "<<endingStation      <<endl;
+	cout<<"#	   please check the receipt                                   #"<<endl;
+	cout<<"###################################################";
 }
 void login()
 {
@@ -2772,4 +2789,27 @@ void validation()
 	system("cls");
 	header();
 	interface();
+}
+void adminLogin()
+{
+	string e ,p ,em ,pas ;
+	em = "abc@gmail.com";
+	pas = "12345678";
+	while(true){
+	cout<<"Enter the email";
+	cin>>e;
+	cout<<"Enter the password";
+	cin>>p;
+	if(e==em&&p==pas)
+	{
+		adminInterface();
+		break;
+	}
+	else{
+		cout<<"incorrect email or password"<<endl;
+	}}
+}
+void adminInterface()
+{
+	cout<<"here admin";
 }

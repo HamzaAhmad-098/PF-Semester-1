@@ -1,5 +1,8 @@
 #include<iostream>
 #include<string>
+#include<vector>
+#include<algorithm>
+#include<conio.h>
 using namespace std;
 int payment( string , string );
 void interface();
@@ -9,15 +12,31 @@ void signIn();
 void signUp();
 void adminLogin();
 void validation();
+void readFeedback();
+void changePrice();
+void removingStation();
+void addingStation();
+void changePasswordOrEmail();
+void userInterface();
+void applyForCard();
+void sendFeedback();
+void getTicket();
+void checkStationList();
 string startingStation ;
 string endingStation;
 void adminInterface();
 int payAmount;
 string mode;
-
-string email , password ,checkEmail , checkpassword;
+vector<string> stations = {
+        "Ali Town", "Thokar Niaz Baig", "Canal View", "Hanjarwal",
+        "Wahdat Road", "Awan Town", "Sabzazar", "Shahnoor","Salahudin Road","Bund Road","Samanabad","Gulshan-E-Ravi","Chauburji","Anarkali","G.P.O","Lakshmi","Railway Station","Sultanpura","U.E.T","Baghbanpura","Shalamar Garden","Pakistan Mint","Mahmood Booti","SalamatPura","Islam Park","Dera Gujran",
+    };
+	string em = "abc@gmail.com",pas = "12345678";
+    string email , password ,checkEmail , checkpassword;
+	string comment = "Nothing Found Here ...";
  main()
 {
+	system("cls");
 	header ();
 	int choice;
 	while (true) {
@@ -2721,25 +2740,33 @@ void interface()
 }
 void login()
 {
+	system("cls");
+	header();
 	string sign ;
 	cout<<" Enter sign in if you have account  "<<endl;
-	cout<<"   Enter sign up if you are new     "<<endl;
-	cin>>sign;
-	if(sign =="signin")
+	cout<<" Enter sign up if you are new     "<<endl;
+	cout<<" Enter back to come back "<<endl;
+	cin.ignore();
+	getline(cin,sign);
+	if(sign =="sign in")
 	{
         signIn();
 		
 	}
-	if(sign=="signup")
+	else if(sign=="sign up")
 	{		
        signUp();
-	   
 	   system("cls");
 	   header();
 	   cout<<"welcome"<<endl;
 	   cout<<"Now sign in our platform "<<endl;
-	   
 	   signIn();
+	}
+	else if(sign=="back"||sign=="Back"){
+		main();
+	}
+	else{
+		cout<<"please enter the sign in or sign up with one space only OR type back correctly"<<endl;
 	}
 }
 void signIn()
@@ -2750,7 +2777,7 @@ void signIn()
 		cin>>checkpassword;
 		if(checkEmail ==  email && checkpassword ==  password )
 		{
-		     validation();
+		    userInterface();
 			
 		}
 		else
@@ -2759,10 +2786,8 @@ void signIn()
 			header();
 			cout<<"user not found "<<endl;
             cout<<"Incorrect email or password "<<endl;
-			
 			cout<<"TRY AGAIN"<<endl;
 			signIn();
-			
 		}
 }
 void signUp()
@@ -2792,9 +2817,8 @@ void validation()
 }
 void adminLogin()
 {
-	string e ,p ,em ,pas ;
-	em = "abc@gmail.com";
-	pas = "12345678";
+	string e ,p;
+	
 	while(true){
 	cout<<"Enter the email";
 	cin>>e;
@@ -2811,5 +2835,172 @@ void adminLogin()
 }
 void adminInterface()
 {
-	cout<<"here admin";
+	system("cls");
+	header();
+	int choice;
+	while (true){
+	cout<<"1.Adding station "<<endl;
+	cout<<"2.Removing station  "<<endl;
+	cout<<"3.Change price "<<endl;
+	cout<<"4.Read feedback "<<endl;
+	cout<<"5.changePasswordOrEmail "<<endl;
+	cout<<"6.Exit "<<endl;
+	cout<<"Enter tyour choice : \n";
+	cin>>choice;
+	switch (choice){
+		case 1: addingStation();
+		break;
+		case 2: removingStation();
+		break;
+		case 3: changePrice();
+		break;
+		case 4: readFeedback();
+		break;
+		case 5 : changePasswordOrEmail();
+		break;
+		case 6:
+		main();
+		cout<<"Exiting the program....";
+		break;
+		default: cout<<"invalid choice ";
+	}}
+}
+void addingStation()
+{
+	system("cls");
+	header();
+	string back;
+	string station;
+	while(true){
+    cout<<"Enter the name of the station  "<<endl;
+	cout<<"And press ok if no any more station be added : ";
+	cin>>station;
+	stations.push_back(station);
+	if(station =="ok"){
+		break;
+	}
+	}
+	cout<<"Station added successfully !~"<<endl;
+	cout<<"Enter back to come back : ";
+	cin>>back;
+	if(back=="back"||back=="Back"){
+		adminInterface();
+	}
+	else{
+		addingStation();
+	}
+}
+void removingStation()
+{
+	string stationToRemove; 
+	cout << "Enter the name of the station to remove: "; 
+	cin.ignore(); // To handle any leftover newline characters from previous inputs 
+	getline(cin, stationToRemove); 
+	auto it = find(stations.begin(), stations.end(), stationToRemove);
+	if (it != stations.end()) {
+		stations.erase(it);
+		cout << "Station \"" << stationToRemove << "\" has been removed." << endl;
+		}
+		else {
+			cout << "Station not found." << endl; 
+			}
+}
+void changePrice()
+{
+	cout<<"change\n";
+	adminInterface();
+}
+void readFeedback()
+{
+	cout<<"Email address : "<<checkEmail<<endl;
+    cout<<"Coment : "<<"\""<<comment<<"\""<<endl; 	
+	getch();
+	system("cls");
+	header();
+}
+void changePasswordOrEmail()
+{
+	int choice;
+	cout<<"Enter 1 to change email\nEnter 2 to change password ";
+	cin>>choice;
+	if(choice==1){
+	cout<<"Enter new email : ";
+	cin>>em;
+	cout<<"Email changed successfully..."; 
+	}
+	else if(choice==2){
+	cout<<"Enter new password : ";
+	cin>>pas;
+	cout<<"Password changed successfully...";
+	}
+	else{
+		cout<<"Invalid choice";
+	}
+}
+void userInterface()
+{
+	system("cls");
+	header();
+	int choice;
+	while(true){
+	cout<<"1.Check stations list"<<endl;
+	cout<<"2.Get ticket online"<<endl;
+	cout<<"3.send feed back"<<endl;
+	cout<<"4.Apply for card online"<<endl;
+	cout<<"5.Exit"<<endl;
+	cout<<"Enter your choice : ";
+	cin>>choice;
+	switch(choice){
+		case 1: checkStationList();
+		break;
+		case 2 : getTicket();
+		break;
+		case 3:  sendFeedback();
+		break;
+		case 4 : applyForCard();
+		break;
+		case 5 : main();
+		break;
+		default:
+		cout<<"Invalid choice ";
+	}}
+}
+
+void checkStationList()
+{
+	system("cls");
+	header();
+	string x;
+    cout << "List of Orange Line Stations in Lahore:" << endl;
+    for (size_t i = 0; i < stations.size(); ++i) {
+        cout << (i + 1) << ". " << stations[i] << endl;
+    }
+    cout<<"Enter back to come back : ";
+	cin>>x;
+	if(x=="back")
+	{
+		userInterface();
+	}
+	else{
+		checkStationList();
+	}
+}
+void getTicket()
+{
+	cout<<"get ticket";
+	userInterface();
+}
+void sendFeedback()
+{
+	cout<<"Feed back"<<endl;
+	cout<<"~&/Send your experience and about journey via orange line /&~"<<endl;
+	cin.ignore();
+	getline(cin,comment);
+	system("cls");
+	header();
+}
+void applyForCard()
+{
+	cout<<"card";
+	userInterface();
 }

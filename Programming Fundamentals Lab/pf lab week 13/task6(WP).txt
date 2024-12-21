@@ -1,0 +1,5 @@
+this is a file for the test of c++ 
+program to read the complet file 
+untill thge end of file and prints 
+the all contents of file line by 
+line on the console ....

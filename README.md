@@ -13,7 +13,7 @@ This repository contains all the programming exercises, assignments, and project
 - Loops (For, While, Do-While)
 - Functions
 - Arrays (1D, 2D)
-- Pointers (Basic)
+- Pointers 
 - File Handling
 - Simple C++ Projects
 
@@ -62,11 +62,42 @@ If you’d like to reach out or collaborate:
 PF-First-Semester/
 ├── Programming fundamentals lab /
 │   ├── week 01 /
-|   |   ├──.cpp   
-│   ├── week 02 / 
+|   |   ├──.cpp files   
+│   ├── week 02 /
+|   |   ├──.cpp files
+│   ├── week 03 /
+|   |   ├──.cpp files   
+│   ├── week 04 /
+|   |   ├──.cpp files
+│   ├── week 05 /
+|   |   ├──.cpp files   
+│   ├── week 06 /
+|   |   ├──.cpp files
+│   ├── week 07 /
+|   |   ├──.cpp files   
+│   ├── week 08 /
+|   |   ├──.cpp files
+│   ├── week 09 /
+|   |   ├──.cpp files     
 ├── Programming days/
-│   ├── week 01 
-│   ├── week 02
+│   ├── week 01 /
+|   |   ├──.cpp files   
+│   ├── week 02 /
+|   |   ├──.cpp files
+│   ├── week 03 /
+|   |   ├──.cpp files   
+│   ├── week 04 /
+|   |   ├──.cpp files
+│   ├── week 05 /
+|   |   ├──.cpp files   
+│   ├── week 06 /
+|   |   ├──.cpp files
+│   ├── week 07 /
+|   |   ├──.cpp files   
+│   ├── week 08 /
+|   |   ├──.cpp files
+│   ├── week 09 /
+|   |   ├──.cpp files    
 ├── README.md
 ---
 > _“Every expert was once a beginner.” — I’m constantly learning, building, and pushing myself to grow._ ✨

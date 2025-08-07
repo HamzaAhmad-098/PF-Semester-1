@@ -32,21 +32,7 @@ This repository contains all the programming exercises, assignments, and project
 - **IDE:** Dev C++ / Code::Blocks / VS Code
 - **Compiler:** g++ (GNU Compiler Collection)
 - **Platform:** Windows / Ubuntu Linux
-## 📁 Repository Structure
 
-```text
-PF-First-Semester/
-├── Assignments/
-│   ├── Assignment1.cpp
-│   ├── Assignment2.cpp
-├── ClassWork/
-│   ├── loops_practice.cpp
-│   ├── functions_demo.cpp
-├── MiniProjects/
-│   ├── ATM-Simulation.cpp
-│   ├── LibrarySystem.cpp
-├── README.md
----
 
 ## 🧠 Learning Outcome
 
@@ -70,5 +56,19 @@ If you’d like to reach out or collaborate:
 - 🌐 Portfolio: [https://yourcustomdomain.com](https://yourcustomdomain.com) *(if applicable)*
 
 ---
+## 📁 Repository Structure
 
+```text
+PF-First-Semester/
+├── Assignments/
+│   ├── Assignment1.cpp
+│   ├── Assignment2.cpp
+├── ClassWork/
+│   ├── loops_practice.cpp
+│   ├── functions_demo.cpp
+├── MiniProjects/
+│   ├── ATM-Simulation.cpp
+│   ├── LibrarySystem.cpp
+├── README.md
+---
 > _“Every expert was once a beginner.” — I’m constantly learning, building, and pushing myself to grow._ ✨

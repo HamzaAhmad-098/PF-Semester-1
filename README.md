@@ -20,8 +20,8 @@ This repository contains all the programming exercises, assignments, and project
 ## 🚀 Highlights
 
 - ✅ Completed foundational programming concepts in C++
-- 📁 Structured code into classwork, assignments, and mini projects
-- 🛠️ Developed mini projects like ATM simulation and library management system
+- 📁 Structured code into Programming Labs and programming Days
+- 🛠️ Developed mini projects like Console based applications and games (Metro train management / path finder's duel)
 - 📚 Strengthened logic-building and problem-solving skills through hands-on coding
 
 ---
@@ -29,7 +29,7 @@ This repository contains all the programming exercises, assignments, and project
 ## 🔧 Tools & Environment
 
 - **Language:** C++
-- **IDE:** Dev C++ / Code::Blocks / VS Code
+- **IDE:** Notepad(primary) / Dev C++ / Code::Blocks / VS Code
 - **Compiler:** g++ (GNU Compiler Collection)
 - **Platform:** Windows / Ubuntu Linux
 
@@ -53,22 +53,20 @@ This repository contains all the programming exercises, assignments, and project
 If you’d like to reach out or collaborate:
 
 - 📧 Email: [jhajji1223@gmail.com](mailto:jhajji1223@gmail.com)
-- 🌐 Portfolio: [https://yourcustomdomain.com](https://yourcustomdomain.com) *(if applicable)*
+- 🌐 Portfolio: [https://portfolio.hamzaxdevelopers.dpdns.org](https://portfolio.hamzaxdevelopers.dpdns.org) 
 
 ---
 ## 📁 Repository Structure
 
 ```text
 PF-First-Semester/
-├── Assignments/
-│   ├── Assignment1.cpp
-│   ├── Assignment2.cpp
-├── ClassWork/
-│   ├── loops_practice.cpp
-│   ├── functions_demo.cpp
-├── MiniProjects/
-│   ├── ATM-Simulation.cpp
-│   ├── LibrarySystem.cpp
+├── Programming fundamentals lab /
+│   ├── week 01 /
+|   |   ├──.cpp   
+│   ├── week 02 / 
+├── Programming days/
+│   ├── week 01 
+│   ├── week 02
 ├── README.md
 ---
 > _“Every expert was once a beginner.” — I’m constantly learning, building, and pushing myself to grow._ ✨

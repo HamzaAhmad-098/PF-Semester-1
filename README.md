@@ -34,20 +34,20 @@ This repository contains all the programming exercises, assignments, and project
 - **Platform:** Windows / Ubuntu Linux
 ## 📁 Repository Structure
 
+```text
 PF-First-Semester/
 ├── Assignments/
-│ ├── Assignment1.cpp
-│ ├── Assignment2.cpp
-│ └── ...
+│   ├── Assignment1.cpp
+│   ├── Assignment2.cpp
 ├── ClassWork/
-│ ├── loops_practice.cpp
-│ ├── functions_demo.cpp
-│ └── ...
+│   ├── loops_practice.cpp
+│   ├── functions_demo.cpp
 ├── MiniProjects/
-│ ├── ATM-Simulation.cpp
-│ ├── LibrarySystem.cpp
-│ └── ...
+│   ├── ATM-Simulation.cpp
+│   ├── LibrarySystem.cpp
 ├── README.md
+
+
 ## 🧠 Learning Outcome
 
 > This repository marks the **beginning of my programming journey**. It showcases my understanding of basic programming concepts and my ability to build procedural logic in C++ for small problems and simulations.

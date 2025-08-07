@@ -33,6 +33,7 @@ This repository contains all the programming exercises, assignments, and project
 - **Compiler:** g++ (GNU Compiler Collection)
 - **Platform:** Windows / Ubuntu Linux
 ## 📁 Repository Structure
+
 PF-First-Semester/
 ├── Assignments/
 │ ├── Assignment1.cpp
@@ -47,8 +48,6 @@ PF-First-Semester/
 │ ├── LibrarySystem.cpp
 │ └── ...
 ├── README.md
----
-
 ## 🧠 Learning Outcome
 
 > This repository marks the **beginning of my programming journey**. It showcases my understanding of basic programming concepts and my ability to build procedural logic in C++ for small problems and simulations.

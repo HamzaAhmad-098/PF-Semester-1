@@ -17,26 +17,6 @@ This repository contains all the programming exercises, assignments, and project
 - File Handling
 - Simple C++ Projects
 
----
-
-## 📁 Repository Structure
-
-```text
-PF-First-Semester/
-├── Assignments/
-│   ├── Assignment1.cpp
-│   ├── Assignment2.cpp
-├── ClassWork/
-│   ├── loops_practice.cpp
-│   ├── functions_demo.cpp
-├── MiniProjects/
-│   ├── ATM-Simulation.cpp
-│   ├── LibrarySystem.cpp
-├── README.md
-
-
----
-
 ## 🚀 Highlights
 
 - ✅ Completed foundational programming concepts in C++

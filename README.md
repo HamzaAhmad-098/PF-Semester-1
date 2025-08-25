@@ -95,7 +95,7 @@ PF-First-Semester/
 
 If you’d like to reach out or collaborate:
 
-- 📧 Email: [jhajji1223@gmail.com](mailto:jhajji1223@gmail.com)
+- 📧 Email: [HamzaxDevelopers](mailto:hamzaxdevelopers1223@gmail.com)
 - 🌐 Portfolio: [https://portfolio.hamzaxdevelopers.dpdns.org](https://portfolio.hamzaxdevelopers.dpdns.org) 
 
 ---
